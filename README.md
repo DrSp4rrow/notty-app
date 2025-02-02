@@ -1,1 +1,0 @@
-<h1>Notty App</h1>
