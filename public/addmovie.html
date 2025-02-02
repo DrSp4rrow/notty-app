@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agregar Película</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="addmovie.html">Add Movie</a></li>
+      </ul>
+    </nav>
+
+    <h1>Agregar Película</h1>
+
+    <form id="movie-form">
+      <label>Nombre de la Película:</label>
+      <input
+        type="text"
+        id="movie-search"
+        placeholder="Buscar película..."
+        autocomplete="off"
+      />
+      <ul id="search-results"></ul>
+
+      <label>Año:</label>
+      <input type="text" id="movie-year" readonly />
+
+      <label>Valoración:</label>
+      <input type="text" id="movie-rating" readonly />
+
+      <label>Géneros:</label>
+      <input type="text" id="movie-genres" readonly />
+
+      <label>Sinopsis:</label>
+      <textarea id="movie-overview" readonly></textarea>
+
+      <label>Carátula:</label>
+      <img id="movie-poster" src="" alt="Carátula" />
+
+      <label>Imagen de Fondo:</label>
+      <img id="movie-backdrop" src="" alt="Fondo" />
+
+      <label>Subir archivo MKV:</label>
+      <input type="file" id="mkv-file" accept=".mkv" />
+      <button type="button" id="upload-button">Subir y procesar</button>
+
+      <!-- Barra de progreso -->
+      <div
+        style="
+          width: 100%;
+          background: #ddd;
+          border-radius: 5px;
+          margin-top: 10px;
+        "
+      >
+        <div
+          id="progress-bar"
+          style="width: 0%; height: 20px; background: green; border-radius: 5px"
+        ></div>
+      </div>
+
+      <!-- Texto de estado -->
+      <p id="upload-status"></p>
+      <p id="file-path"></p>
+
+      <button type="submit">Guardar</button>
+    </form>
+  </body>
+</html>
